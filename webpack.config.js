@@ -37,7 +37,7 @@ function createStyleUseObject (isModule = true) {
   ]
 }
 // variables declare
-var babelrc = fs.readFileSync(utils.getCrtPath('.babelrc'),'UTF-8');
+var babelrc = JSON.parse(fs.readFileSync(utils.getCrtPath('.babelrc'),'UTF-8'));
 var entryobj = {}
 var htmlPlugins = []
 var distdir = utils.getCrtPath('dist')
